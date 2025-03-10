@@ -93,6 +93,9 @@
                                                     <label class="form-check-label" for="id_payment_on_get">Наличными/картой
                                                         при плучении</label>
                                                 </div>
+                                                {% if form.payment_on_get.errors %}
+                                                    <div class="alert alert-danger alert-dismissible fade show">{{form.payment_on_get.errors}}</div>
+                                                {% endif %}
                                             </div>
                                         </div>
                                         <button type="submit" class="btn btn-dark">Оформить заказ</button>
