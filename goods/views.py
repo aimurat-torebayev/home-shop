@@ -25,7 +25,7 @@ class CatalogView(ListView):
         elif query:
             goods = q_search(query)
         else:
-            goods = super().get_queryset().objects.filter(category__slug=category_slug)
+            goods = super().get_queryset().filter(category__slug=category_slug)
             if not goods.exists():
                 raise Http404()
             
